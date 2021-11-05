@@ -1,10 +1,19 @@
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
+import { Provider, createClient } from "urql"
+
+const client = createClient({ 
+  url: 'http://localhost:4000/graphql',
+  fetchOptions: {
+    credentials: "include"
+  }  
+});
 
 import theme from '../theme'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider resetCSS theme={theme}>
+    <Provider value={client}>
+      <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider
         options={{
           useSystemColorMode: true,
@@ -13,6 +22,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </ColorModeProvider>
     </ChakraProvider>
+    </Provider>
   )
 }
 
