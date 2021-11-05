@@ -1,7 +1,6 @@
 ## Project Full-stack React/Next with GraphQl, Typescript and PostgreSQL  
 ![GitHub forks](https://img.shields.io/github/forks/kevynfg/jellyfish-web)
 ![Bitbucket open issues](https://img.shields.io/github/issues/kevynfg/jellyfish-web)
-![Bitbucket open pull requests](https://github.com/kevynfg/jellyfish-web/pulls)  
 A fullstack project that uses the latest of these stacks below.  
 
 ### Stack: 
