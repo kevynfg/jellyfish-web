@@ -1,9 +1,7 @@
 ## Project Full-stack React/Next with GraphQl, Typescript and PostgreSQL  
-![GitHub repo size](https://img.shields.io/github/repo-size/jellyfish-web/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/jellyfish-web/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/jellyfish-web/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/jellyfish-web/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/jellyfish-web/README-template?style=for-the-badge)  
+![GitHub forks](https://img.shields.io/github/forks/kevynfg/jellyfish-web)
+![Bitbucket open issues](https://img.shields.io/github/issues/kevynfg/jellyfish-web)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/jellyfish-web/)  
 A fullstack project that uses the latest of these stacks below.  
 
 ### Stack: 
