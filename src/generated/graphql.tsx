@@ -94,7 +94,7 @@ export type UsernamePasswordInput = {
   username: Scalars['String'];
 };
 
-export type Unnamed_1_MutationVariables = Exact<{
+export type MutationVariables = Exact<{
   username: Scalars['String'];
   password: Scalars['String'];
 }>;
