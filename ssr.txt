@@ -1,0 +1,9 @@
+me -> browser http://localhost:3000
+-> next.js server
+-> request graphql server localhost:4000
+-> building the HTML
+-> sending back to your browser
+
+no next js, quando você carrega uma única página, as páginas depois dela não são SSR, quando você clica em uma rota e dessa rota clica para voltar para outra página,
+os dados estão em cache quando você faz isso, então ele vai usar client side para navegar nessa página pois a query não está carregada ainda.
+então a primeira pagina que você carrega no next js vai ser em SSR, e depois disso não...
