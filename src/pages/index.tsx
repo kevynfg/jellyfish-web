@@ -5,13 +5,12 @@ import { Layout } from "../components/Layout";
 import { Link, Text, Heading, Box, Flex  } from "@chakra-ui/layout";
 import { Button, Stack } from "@chakra-ui/react";
 import NextLink from 'next/link';
-import React from "react";
+import React, { useState } from "react";
 
 const Index = () => {
+    const [variables, setVariables] = useState({limit: 33, cursor: null as null | string});
     const [{data, fetching}] = usePostsQuery({
-        variables: {
-            limit: 10
-        }
+        variables
     });
 
     if (!fetching && !data) {
@@ -30,7 +29,7 @@ const Index = () => {
             {!data && fetching ? (<div>loading...</div>) 
             : (
             <Stack>
-                {data!.posts.map((p) => (
+                {data!.posts.posts.map((p) => (
                 <Box key={p.id} p={5} shadow="md" borderWidth="1px">
                     <Heading fontSize="xl">{p.title}</Heading>
                     <Text mt={4}>{p.textSnippet}</Text>
@@ -39,9 +38,14 @@ const Index = () => {
             </Stack> 
             )}
             {
-                data ? (
+                data && data.posts.hasMore ? (
                     <Flex>
-                        <Button isLoading={fetching} m="auto" my={8}>load more</Button>
+                        <Button onClick={() => {
+                            setVariables({
+                                limit: variables.limit,
+                                cursor: data.posts.posts[data.posts.posts.length - 1].createdAt
+                            })
+                        }} isLoading={fetching} m="auto" my={8}>load more</Button>
                     </Flex>
                 ) : null
             }
