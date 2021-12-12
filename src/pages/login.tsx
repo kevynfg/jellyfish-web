@@ -27,6 +27,8 @@ const Login = ({}) => {
           if (response.data?.login.errors) {
             setErrors(toErrorMap(response.data.login.errors));
           } else if (response.data?.login.user) {
+            console.log("response ", response);
+            console.log("router ", router);
             if (typeof router.query.next === "string") {
               router.push(router.query.next);
             } else {

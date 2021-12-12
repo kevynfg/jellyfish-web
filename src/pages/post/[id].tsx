@@ -6,7 +6,7 @@ import { createUrqlClient } from "../../utils/createUrqlClient";
 import { useGetPostFromUrl } from "../../utils/useGetPostFromUrl";
 
 const Post = ({}) => {
-  const [{ data, error, fetching }] = useGetPostFromUrl();
+  const [{ data, fetching }] = useGetPostFromUrl();
   if (fetching) {
     return (
       <Layout>
